@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alvaro Serrano — Product Builder</title>
+<meta name="description" content="Engineer-turned-product builder. Indie projects in legal-tech, AI tutoring, and language learning." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<script>
+  (function () {
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    } catch (error) {
+      // Keep the site usable if storage is blocked.
+    }
+  })();
+</script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <a href="#top" class="nav-name">Alvaro Serrano</a>
+  <div class="nav-right">
+    <nav aria-label="Primary navigation">
+      <a href="#projects" data-i18n="navProjects">Projects</a>
+      <a href="#about" data-i18n="navAbout">About</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="display-controls" aria-label="Display options">
+      <label class="sr-only" for="language-select" data-i18n="languageLabel">Language</label>
+      <select id="language-select" class="language-select" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="es">ES</option>
+      </select>
+      <button
+        type="button"
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-label="Switch to dark mode"
+        aria-pressed="false"
+      >
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <p class="eyebrow" data-i18n="heroEyebrow">Brighton, UK · Available for full-time roles</p>
+    <h1 data-i18n-html="heroTitle">Engineer-turned-<em>product builder</em><br />shipping AI-powered web apps.</h1>
+    <p class="lede" data-i18n="heroLede">
+      I design, build, and launch digital products end-to-end — from legal-tech SaaS to AI language tutors.
+      Previously at IBM, British Airways, and WTW. MSc in Electronic &amp; Electrical Engineering.
+    </p>
+    <div class="cta-row">
+      <a href="#projects" class="btn btn-primary" data-i18n="ctaProjects">View projects</a>
+      <a href="mailto:alvaro.serrano.gp@gmail.com" class="btn btn-ghost" data-i18n="ctaContact">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2 class="section-title" data-i18n="projectsTitle">Selected Projects</h2>
+
+    <article class="project">
+      <div class="project-meta">
+        <span class="project-num">01</span>
+        <h3>MyFineFix</h3>
+        <p class="project-tag" data-i18n="project1Tag">AI parking-fine appeal generator · Legal-tech SaaS</p>
+        <p class="project-desc" data-i18n="project1Desc">
+          A self-serve legal-tech platform that automatically generates UK parking-fine appeal letters in under two minutes.
+          End-to-end: problem discovery, UX, front-end, Stripe payments, and automated email workflows.
+        </p>
+        <ul class="stack">
+          <li>HTML / CSS / JS</li>
+          <li>Stripe</li>
+          <li>Netlify</li>
+          <li>OpenAI</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://myfinefix.com" target="_blank" rel="noopener" data-i18n="liveSiteLink">Live site →</a>
+        </div>
+      </div>
+      <div class="project-visual">
+        <img src="assets/screenshots/myfinefix.png" alt="MyFineFix product screenshot" loading="lazy" data-i18n-alt="project1Alt" />
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-meta">
+        <span class="project-num">02</span>
+        <h3>JobTrail</h3>
+        <p class="project-tag" data-i18n="project2Tag">Job application CRM · Chrome Extension + Web App</p>
+        <p class="project-desc" data-i18n="project2Desc">
+          A CRM that auto-captures job postings from LinkedIn, Greenhouse, Lever, and Ashby with one-click save.
+          Multi-device sync via Google Drive turns a scattered job search into a structured pipeline.
+        </p>
+        <ul class="stack">
+          <li>Chrome Extension (MV3)</li>
+          <li>Google OAuth</li>
+          <li>Google Drive API</li>
+          <li>JavaScript</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://jobtrailapp.netlify.app/" target="_blank" rel="noopener" data-i18n="liveDemoLink">Live demo →</a>
+        </div>
+      </div>
+      <div class="project-visual">
+        <img src="assets/screenshots/jobtrail.png" alt="JobTrail dashboard screenshot" loading="lazy" data-i18n-alt="project2Alt" />
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-meta">
+        <span class="project-num">03</span>
+        <h3>InkPath <span class="zh">墨径</span></h3>
+        <p class="project-tag" data-i18n="project3Tag">Mandarin learning web app · PWA</p>
+        <p class="project-desc" data-i18n="project3Desc">
+          An installable Progressive Web App for immersive Mandarin learning — curated story library,
+          paste-to-read mode, HSK 1–6 vocabulary engine (1,100+ entries), and an active-recall flashcard system
+          with Google auth and cross-device cloud sync.
+        </p>
+        <ul class="stack">
+          <li>Progressive Web App</li>
+          <li>Service Workers</li>
+          <li>Google Auth</li>
+          <li>JavaScript</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://inkpath.netlify.app/" target="_blank" rel="noopener" data-i18n="liveDemoLink">Live demo →</a>
+        </div>
+      </div>
+      <div class="project-visual">
+        <img src="assets/screenshots/inkpath.png" alt="InkPath Mandarin learning app screenshot" loading="lazy" data-i18n-alt="project3Alt" />
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-meta">
+        <span class="project-num">04</span>
+        <h3>French Exam Tutor AI</h3>
+        <p class="project-tag" data-i18n="project4Tag">Voice-interactive AI language tutor</p>
+        <p class="project-desc" data-i18n="project4Desc">
+          A voice-interactive AI tutor that simulates the C1 French oral exam. Twelve-minute automated
+          assessment with randomised scenarios, real-time grammatical corrections, and an estimated proficiency score.
+        </p>
+        <ul class="stack">
+          <li>ElevenLabs</li>
+          <li>Prompt Engineering</li>
+          <li>GitHub Pages</li>
+        </ul>
+        <div class="project-links">
+          <a href="#contact" data-i18n="demoRequestLink">Demo on request →</a>
+        </div>
+      </div>
+      <div class="project-visual">
+        <img src="assets/screenshots/FrenchExamTutorAI.png" alt="French Exam Tutor AI screenshot" loading="lazy" data-i18n-alt="project4Alt" />
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-meta">
+        <span class="project-num">05</span>
+        <h3>iQIYI Triple Subtitles</h3>
+        <p class="project-tag" data-i18n="project5Tag">Chrome extension · Mandarin immersion tool</p>
+        <p class="project-desc" data-i18n="project5Desc">
+          A Chrome extension that overlays triple-layer subtitles (Mandarin, Pinyin, English) on iQIYI in real time —
+          turning native Chinese video into a structured immersion tool for language learners.
+        </p>
+        <ul class="stack">
+          <li>Chrome Extension (MV3)</li>
+          <li>JavaScript</li>
+          <li>DOM Manipulation</li>
+        </ul>
+        <div class="project-links">
+          <a href="#contact" data-i18n="demoRequestLink">Demo on request →</a>
+        </div>
+      </div>
+      <div class="project-visual">
+        <img src="assets/screenshots/iqiyi.png" alt="iQIYI triple subtitles screenshot" loading="lazy" data-i18n-alt="project5Alt" />
+      </div>
+    </article>
+
+  </section>
+
+  <section id="about" class="about">
+    <h2 class="section-title" data-i18n="aboutTitle">About</h2>
+    <div class="about-body">
+      <p data-i18n="aboutP1">
+        I'm an engineer-turned-product builder based in Brighton, with an MSc in Electronic &amp;
+        Electrical Engineering from Comillas Pontifical University and exchange years at the
+        University of Illinois and Chalmers University.
+      </p>
+      <p data-i18n="aboutP2">
+        Over the past five years I've worked across technology operations, analytics, and product development —
+        at IBM (cloud incident response for financial institutions), Willis Towers Watson (HR analytics
+        dashboards for international clients), and British Airways (frontline operations for 200+ passengers per flight).
+      </p>
+      <p data-i18n="aboutP3">
+        Today I focus on building products end-to-end. The pieces above are all live, all mine, and all shipped solo.
+        I write in Spanish, English, and French — and I'm looking for product, engineering, or
+        analytics roles where I can keep building.
+      </p>
+      <div class="experience-strip">
+        <span>IBM</span>
+        <span>·</span>
+        <span>British Airways</span>
+        <span>·</span>
+        <span>Willis Towers Watson</span>
+        <span>·</span>
+        <span>Comillas University</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title" data-i18n="contactTitle">Contact</h2>
+    <p class="contact-lede" data-i18n="contactLede">Open to full-time roles in product, engineering, and analytics.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:alvaro.serrano.gp@gmail.com">alvaro.serrano.gp@gmail.com</a></li>
+      <li><a href="https://linkedin.com/in/alvaro-serrano-gp" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> <span data-i18n="footerText">Alvaro Serrano · Brighton, UK</span></p>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      pageTitle: 'Alvaro Serrano — Product Builder',
+      metaDescription: 'Engineer-turned-product builder. Indie projects in legal-tech, AI tutoring, and language learning.',
+      navProjects: 'Projects',
+      navAbout: 'About',
+      navContact: 'Contact',
+      languageLabel: 'Language',
+      themeToDark: 'Switch to dark mode',
+      themeToLight: 'Switch to light mode',
+      heroEyebrow: 'Brighton, UK · Available for full-time roles',
+      heroTitle: 'Engineer-turned-<em>product builder</em><br />shipping AI-powered web apps.',
+      heroLede: 'I design, build, and launch digital products end-to-end — from legal-tech SaaS to AI language tutors. Previously at IBM, British Airways, and WTW. MSc in Electronic & Electrical Engineering.',
+      ctaProjects: 'View projects',
+      ctaContact: 'Get in touch',
+      projectsTitle: 'Selected Projects',
+      project1Tag: 'AI parking-fine appeal generator · Legal-tech SaaS',
+      project1Desc: 'A self-serve legal-tech platform that automatically generates UK parking-fine appeal letters in under two minutes. End-to-end: problem discovery, UX, front-end, Stripe payments, and automated email workflows.',
+      project2Tag: 'Job application CRM · Chrome Extension + Web App',
+      project2Desc: 'A CRM that auto-captures job postings from LinkedIn, Greenhouse, Lever, and Ashby with one-click save. Multi-device sync via Google Drive turns a scattered job search into a structured pipeline.',
+      project3Tag: 'Mandarin learning web app · PWA',
+      project3Desc: 'An installable Progressive Web App for immersive Mandarin learning — curated story library, paste-to-read mode, HSK 1–6 vocabulary engine (1,100+ entries), and an active-recall flashcard system with Google auth and cross-device cloud sync.',
+      project4Tag: 'Voice-interactive AI language tutor',
+      project4Desc: 'A voice-interactive AI tutor that simulates the C1 French oral exam. Twelve-minute automated assessment with randomised scenarios, real-time grammatical corrections, and an estimated proficiency score.',
+      project5Tag: 'Chrome extension · Mandarin immersion tool',
+      project5Desc: 'A Chrome extension that overlays triple-layer subtitles (Mandarin, Pinyin, English) on iQIYI in real time — turning native Chinese video into a structured immersion tool for language learners.',
+      liveSiteLink: 'Live site →',
+      liveDemoLink: 'Live demo →',
+      demoRequestLink: 'Demo on request →',
+      aboutTitle: 'About',
+      aboutP1: "I'm an engineer-turned-product builder based in Brighton, with an MSc in Electronic & Electrical Engineering from Comillas Pontifical University and exchange years at the University of Illinois and Chalmers University.",
+      aboutP2: "Over the past five years I've worked across technology operations, analytics, and product development — at IBM (cloud incident response for financial institutions), Willis Towers Watson (HR analytics dashboards for international clients), and British Airways (frontline operations for 200+ passengers per flight).",
+      aboutP3: "Today I focus on building products end-to-end. The pieces above are all live, all mine, and all shipped solo. I write in Spanish, English, and French — and I'm looking for product, engineering, or analytics roles where I can keep building.",
+      contactTitle: 'Contact',
+      contactLede: 'Open to full-time roles in product, engineering, and analytics.',
+      footerText: 'Alvaro Serrano · Brighton, UK',
+      project1Alt: 'MyFineFix product screenshot',
+      project2Alt: 'JobTrail dashboard screenshot',
+      project3Alt: 'InkPath Mandarin learning app screenshot',
+      project4Alt: 'French Exam Tutor AI screenshot',
+      project5Alt: 'iQIYI triple subtitles screenshot'
+    },
+    fr: {
+      pageTitle: 'Alvaro Serrano — Product Builder',
+      metaDescription: 'Ingénieur devenu product builder. Projets indépendants en legal-tech, tutorat IA et apprentissage des langues.',
+      navProjects: 'Projets',
+      navAbout: 'Profil',
+      navContact: 'Contact',
+      languageLabel: 'Langue',
+      themeToDark: 'Passer en mode sombre',
+      themeToLight: 'Passer en mode clair',
+      heroEyebrow: 'Brighton, Royaume-Uni · Disponible pour des postes à temps plein',
+      heroTitle: 'Ingénieur devenu <em>product builder</em><br />créateur d’applications web propulsées par l’IA.',
+      heroLede: 'Je conçois, construis et lance des produits numériques de bout en bout — des SaaS legal-tech aux tuteurs linguistiques avec IA. Expériences précédentes chez IBM, British Airways et WTW. MSc en ingénierie électronique et électrique.',
+      ctaProjects: 'Voir les projets',
+      ctaContact: 'Me contacter',
+      projectsTitle: 'Projets sélectionnés',
+      project1Tag: 'Générateur d’appels de contraventions par IA · SaaS legal-tech',
+      project1Desc: 'Une plateforme legal-tech en libre-service qui génère automatiquement des lettres d’appel pour des contraventions de stationnement au Royaume-Uni en moins de deux minutes. De bout en bout : découverte du problème, UX, front-end, paiements Stripe et workflows d’e-mails automatisés.',
+      project2Tag: 'CRM de candidatures · Extension Chrome + application web',
+      project2Desc: 'Un CRM qui capture automatiquement les offres d’emploi depuis LinkedIn, Greenhouse, Lever et Ashby en un clic. La synchronisation multi-appareils via Google Drive transforme une recherche dispersée en pipeline structuré.',
+      project3Tag: 'Application web pour apprendre le mandarin · PWA',
+      project3Desc: 'Une Progressive Web App installable pour apprendre le mandarin en immersion — bibliothèque d’histoires sélectionnées, mode copier-coller pour lire, moteur de vocabulaire HSK 1–6 (1 100+ entrées) et système de flashcards à rappel actif avec authentification Google et synchronisation cloud multi-appareils.',
+      project4Tag: 'Tuteur linguistique IA interactif par la voix',
+      project4Desc: 'Un tuteur IA vocal qui simule l’oral de français C1. Évaluation automatisée de douze minutes avec scénarios aléatoires, corrections grammaticales en temps réel et estimation du niveau.',
+      project5Tag: 'Extension Chrome · Outil d’immersion en mandarin',
+      project5Desc: 'Une extension Chrome qui superpose en temps réel trois niveaux de sous-titres (mandarin, pinyin, anglais) sur iQIYI — transformant les vidéos chinoises natives en outil d’immersion structuré pour apprenants.',
+      liveSiteLink: 'Site en ligne →',
+      liveDemoLink: 'Démo en ligne →',
+      demoRequestLink: 'Démo sur demande →',
+      aboutTitle: 'Profil',
+      aboutP1: 'Je suis ingénieur devenu product builder, basé à Brighton, avec un MSc en ingénierie électronique et électrique de l’Université pontificale de Comillas et des années d’échange à l’Université de l’Illinois et à Chalmers University.',
+      aboutP2: 'Ces cinq dernières années, j’ai travaillé dans les opérations technologiques, l’analytics et le développement produit — chez IBM (réponse aux incidents cloud pour des institutions financières), Willis Towers Watson (tableaux de bord RH pour clients internationaux) et British Airways (opérations de première ligne pour 200+ passagers par vol).',
+      aboutP3: 'Aujourd’hui, je me concentre sur la création de produits de bout en bout. Les projets ci-dessus sont tous en ligne, entièrement conçus par moi et lancés en solo. J’écris en espagnol, anglais et français — et je cherche des postes en produit, ingénierie ou analytics où je peux continuer à construire.',
+      contactTitle: 'Contact',
+      contactLede: 'Ouvert aux postes à temps plein en produit, ingénierie et analytics.',
+      footerText: 'Alvaro Serrano · Brighton, Royaume-Uni',
+      project1Alt: 'Capture d’écran du produit MyFineFix',
+      project2Alt: 'Capture d’écran du tableau de bord JobTrail',
+      project3Alt: 'Capture d’écran de l’application d’apprentissage du mandarin InkPath',
+      project4Alt: 'Capture d’écran de French Exam Tutor AI',
+      project5Alt: 'Capture d’écran des triples sous-titres iQIYI'
+    },
+    es: {
+      pageTitle: 'Alvaro Serrano — Product Builder',
+      metaDescription: 'Ingeniero convertido en product builder. Proyectos independientes de legal-tech, tutores con IA y aprendizaje de idiomas.',
+      navProjects: 'Proyectos',
+      navAbout: 'Sobre mí',
+      navContact: 'Contacto',
+      languageLabel: 'Idioma',
+      themeToDark: 'Cambiar a modo oscuro',
+      themeToLight: 'Cambiar a modo claro',
+      heroEyebrow: 'Brighton, Reino Unido · Disponible para puestos a tiempo completo',
+      heroTitle: 'Ingeniero convertido en <em>product builder</em><br />creando apps web con IA.',
+      heroLede: 'Diseño, construyo y lanzo productos digitales de principio a fin — desde SaaS de legal-tech hasta tutores de idiomas con IA. Anteriormente en IBM, British Airways y WTW. Máster en Ingeniería Electrónica y Eléctrica.',
+      ctaProjects: 'Ver proyectos',
+      ctaContact: 'Contactar',
+      projectsTitle: 'Proyectos seleccionados',
+      project1Tag: 'Generador de apelaciones de multas con IA · SaaS legal-tech',
+      project1Desc: 'Una plataforma legal-tech de autoservicio que genera automáticamente cartas de apelación para multas de aparcamiento en Reino Unido en menos de dos minutos. De principio a fin: descubrimiento del problema, UX, front-end, pagos con Stripe y flujos de email automatizados.',
+      project2Tag: 'CRM de candidaturas · Extensión de Chrome + app web',
+      project2Desc: 'Un CRM que captura automáticamente ofertas de LinkedIn, Greenhouse, Lever y Ashby con un clic. La sincronización multi-dispositivo con Google Drive convierte una búsqueda dispersa en un pipeline estructurado.',
+      project3Tag: 'App web para aprender mandarín · PWA',
+      project3Desc: 'Una Progressive Web App instalable para aprender mandarín por inmersión — biblioteca curada de historias, modo pegar-para-leer, motor de vocabulario HSK 1–6 (1.100+ entradas) y sistema de flashcards de recuerdo activo con autenticación de Google y sincronización cloud multi-dispositivo.',
+      project4Tag: 'Tutor de idiomas con IA interactivo por voz',
+      project4Desc: 'Un tutor con IA por voz que simula el examen oral de francés C1. Evaluación automatizada de doce minutos con escenarios aleatorios, correcciones gramaticales en tiempo real y estimación del nivel.',
+      project5Tag: 'Extensión de Chrome · Herramienta de inmersión en mandarín',
+      project5Desc: 'Una extensión de Chrome que superpone subtítulos triples (mandarín, pinyin e inglés) en iQIYI en tiempo real — convirtiendo vídeo chino nativo en una herramienta de inmersión estructurada para estudiantes.',
+      liveSiteLink: 'Sitio en vivo →',
+      liveDemoLink: 'Demo en vivo →',
+      demoRequestLink: 'Demo bajo petición →',
+      aboutTitle: 'Sobre mí',
+      aboutP1: 'Soy ingeniero convertido en product builder, basado en Brighton, con un Máster en Ingeniería Electrónica y Eléctrica por la Universidad Pontificia Comillas y años de intercambio en la University of Illinois y Chalmers University.',
+      aboutP2: 'Durante los últimos cinco años he trabajado en operaciones tecnológicas, analítica y desarrollo de producto — en IBM (respuesta a incidentes cloud para instituciones financieras), Willis Towers Watson (dashboards de RR. HH. para clientes internacionales) y British Airways (operaciones de primera línea para 200+ pasajeros por vuelo).',
+      aboutP3: 'Hoy me centro en construir productos de principio a fin. Los proyectos de arriba están todos en vivo, son míos y los lancé en solitario. Escribo en español, inglés y francés — y busco roles de producto, ingeniería o analítica donde pueda seguir construyendo.',
+      contactTitle: 'Contacto',
+      contactLede: 'Abierto a puestos a tiempo completo en producto, ingeniería y analítica.',
+      footerText: 'Alvaro Serrano · Brighton, Reino Unido',
+      project1Alt: 'Captura de pantalla del producto MyFineFix',
+      project2Alt: 'Captura de pantalla del panel de JobTrail',
+      project3Alt: 'Captura de pantalla de la app de aprendizaje de mandarín InkPath',
+      project4Alt: 'Captura de pantalla de French Exam Tutor AI',
+      project5Alt: 'Captura de pantalla de subtítulos triples de iQIYI'
+    }
+  };
+
+  const languageSelect = document.getElementById('language-select');
+  const themeToggle = document.getElementById('theme-toggle');
+  const metaDescription = document.querySelector('meta[name="description"]');
+
+  function getStoredValue(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function setStoredValue(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch (error) {
+      // Preferences still work for the current page view.
+    }
+  }
+
+  function applyLanguage(language) {
+    const activeLanguage = translations[language] ? language : 'en';
+    const copy = translations[activeLanguage];
+
+    document.documentElement.lang = activeLanguage;
+    document.title = copy.pageTitle;
+    metaDescription.setAttribute('content', copy.metaDescription);
+
+    document.querySelectorAll('[data-i18n]').forEach((element) => {
+      const key = element.dataset.i18n;
+      if (copy[key]) element.textContent = copy[key];
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach((element) => {
+      const key = element.dataset.i18nHtml;
+      if (copy[key]) element.innerHTML = copy[key];
+    });
+
+    document.querySelectorAll('[data-i18n-alt]').forEach((element) => {
+      const key = element.dataset.i18nAlt;
+      if (copy[key]) element.setAttribute('alt', copy[key]);
+    });
+
+    languageSelect.value = activeLanguage;
+    languageSelect.setAttribute('aria-label', copy.languageLabel);
+    setStoredValue('language', activeLanguage);
+    updateThemeToggle();
+  }
+
+  function applyTheme(theme) {
+    const isDark = theme === 'dark';
+    document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
+    setStoredValue('theme', isDark ? 'dark' : 'light');
+    updateThemeToggle();
+  }
+
+  function updateThemeToggle() {
+    const currentLanguage = translations[languageSelect.value] ? languageSelect.value : 'en';
+    const copy = translations[currentLanguage];
+    const isDark = document.documentElement.dataset.theme === 'dark';
+    const label = isDark ? copy.themeToLight : copy.themeToDark;
+
+    themeToggle.setAttribute('aria-label', label);
+    themeToggle.setAttribute('title', label);
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  languageSelect.addEventListener('change', (event) => {
+    applyLanguage(event.target.value);
+  });
+
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+  });
+
+  applyLanguage(getStoredValue('language') || 'en');
+  updateThemeToggle();
+</script>
+
+</body>
+</html>
