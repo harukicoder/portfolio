@@ -1,2 +1,6 @@
 .DS_Store
 Thumbs.db
+
+# Outreach work files (kept local, not part of the public site)
+outreach-tracker.xlsx
+.~lock.*#
