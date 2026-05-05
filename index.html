@@ -55,8 +55,13 @@
 
 <main id="top">
 
-  <section class="hero">
-    <p class="eyebrow" data-i18n="heroEyebrow">Brighton, UK · Available for full-time roles</p>
+  <section class="hero" data-reveal>
+    <div class="hero-decor" aria-hidden="true">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+      <span class="grid-overlay"></span>
+    </div>
+    <p class="eyebrow" data-i18n="heroEyebrow"><span class="status-dot" aria-hidden="true"></span>Brighton, UK</p>
     <h1 data-i18n-html="heroTitle">Engineer-turned-<em>product builder</em><br />shipping AI-powered web apps.</h1>
     <p class="lede" data-i18n="heroLede">
       I design, build, and launch digital products end-to-end — from legal-tech SaaS to AI language tutors.
@@ -66,12 +71,18 @@
       <a href="#projects" class="btn btn-primary" data-i18n="ctaProjects">View projects</a>
       <a href="mailto:alvaro.serrano.gp@gmail.com" class="btn btn-ghost" data-i18n="ctaContact">Get in touch</a>
     </div>
+    <div class="hero-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>IBM</span><span>·</span><span>British Airways</span><span>·</span><span>Willis Towers Watson</span><span>·</span><span>Comillas University</span><span>·</span><span>University of Illinois</span><span>·</span><span>Chalmers</span><span>·</span>
+        <span>IBM</span><span>·</span><span>British Airways</span><span>·</span><span>Willis Towers Watson</span><span>·</span><span>Comillas University</span><span>·</span><span>University of Illinois</span><span>·</span><span>Chalmers</span><span>·</span>
+      </div>
+    </div>
   </section>
 
-  <section id="projects" class="projects">
+  <section id="projects" class="projects" data-reveal>
     <h2 class="section-title" data-i18n="projectsTitle">Selected Projects</h2>
 
-    <article class="project">
+    <article class="project" data-reveal>
       <div class="project-meta">
         <span class="project-num">01</span>
         <h3>MyFineFix</h3>
@@ -95,7 +106,7 @@
       </div>
     </article>
 
-    <article class="project">
+    <article class="project" data-reveal>
       <div class="project-meta">
         <span class="project-num">02</span>
         <h3>JobTrail</h3>
@@ -119,7 +130,7 @@
       </div>
     </article>
 
-    <article class="project">
+    <article class="project" data-reveal>
       <div class="project-meta">
         <span class="project-num">03</span>
         <h3>InkPath <span class="zh">墨径</span></h3>
@@ -144,7 +155,7 @@
       </div>
     </article>
 
-    <article class="project">
+    <article class="project" data-reveal>
       <div class="project-meta">
         <span class="project-num">04</span>
         <h3>French Exam Tutor AI</h3>
@@ -167,7 +178,7 @@
       </div>
     </article>
 
-    <article class="project">
+    <article class="project" data-reveal>
       <div class="project-meta">
         <span class="project-num">05</span>
         <h3>iQIYI Triple Subtitles</h3>
@@ -192,7 +203,7 @@
 
   </section>
 
-  <section id="about" class="about">
+  <section id="about" class="about" data-reveal>
     <h2 class="section-title" data-i18n="aboutTitle">About</h2>
     <div class="about-body">
       <p data-i18n="aboutP1">
@@ -222,12 +233,11 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="contact" data-reveal>
     <h2 class="section-title" data-i18n="contactTitle">Contact</h2>
     <p class="contact-lede" data-i18n="contactLede">Open to full-time roles or selected freelance projects.</p>
     <ul class="contact-list">
       <li><a href="mailto:alvaro.serrano.gp@gmail.com">alvaro.serrano.gp@gmail.com</a></li>
-      <li><a href="https://linkedin.com/in/alvaro-serrano-gp" target="_blank" rel="noopener">LinkedIn</a></li>
     </ul>
   </section>
 
@@ -248,7 +258,7 @@
       languageLabel: 'Language',
       themeToDark: 'Switch to dark mode',
       themeToLight: 'Switch to light mode',
-      heroEyebrow: 'Brighton, UK · Available for full-time roles',
+      heroEyebrow: 'Brighton, UK',
       heroTitle: 'Engineer-turned-<em>product builder</em><br />shipping AI-powered web apps.',
       heroLede: 'I design, build, and launch digital products end-to-end — from legal-tech SaaS to AI language tutors. Previously at IBM, British Airways, and WTW. MSc in Electronic & Electrical Engineering.',
       ctaProjects: 'View projects',
@@ -289,7 +299,7 @@
       languageLabel: 'Langue',
       themeToDark: 'Passer en mode sombre',
       themeToLight: 'Passer en mode clair',
-      heroEyebrow: 'Brighton, Royaume-Uni · Disponible pour des postes à temps plein',
+      heroEyebrow: 'Brighton, Royaume-Uni',
       heroTitle: 'Ingénieur devenu <em>product builder</em><br />créateur d’applications web propulsées par l’IA.',
       heroLede: 'Je conçois, construis et lance des produits numériques de bout en bout — des SaaS legal-tech aux tuteurs linguistiques avec IA. Expériences précédentes chez IBM, British Airways et WTW. MSc en ingénierie électronique et électrique.',
       ctaProjects: 'Voir les projets',
@@ -330,7 +340,7 @@
       languageLabel: 'Idioma',
       themeToDark: 'Cambiar a modo oscuro',
       themeToLight: 'Cambiar a modo claro',
-      heroEyebrow: 'Brighton, Reino Unido · Disponible para puestos a tiempo completo',
+      heroEyebrow: 'Brighton, Reino Unido',
       heroTitle: 'Ingeniero convertido en <em>product builder</em><br />creando apps web con IA.',
       heroLede: 'Diseño, construyo y lanzo productos digitales de principio a fin — desde SaaS de legal-tech hasta tutores de idiomas con IA. Anteriormente en IBM, British Airways y WTW. Máster en Ingeniería Electrónica y Eléctrica.',
       ctaProjects: 'Ver proyectos',
@@ -444,6 +454,34 @@
 
   applyLanguage(getStoredValue('language') || 'en');
   updateThemeToggle();
+
+  // Scroll reveal — gentle fade-up when sections enter the viewport.
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add('is-revealed'));
+  }
+
+  // Soft parallax on hero blobs based on cursor position.
+  const heroDecor = document.querySelector('.hero-decor');
+  if (heroDecor && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelector('.hero').addEventListener('mousemove', (e) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      heroDecor.style.setProperty('--mx', x.toFixed(3));
+      heroDecor.style.setProperty('--my', y.toFixed(3));
+    });
+  }
 </script>
 
 </body>
