@@ -45,7 +45,7 @@ You need 5 screenshots saved to `assets/screenshots/`:
 |---|---|---|
 | `myfinefix.png` | Hero/landing of myfinefix.com | Open in Chrome at 1440×900, ⌘⇧4 + space then click window |
 | `jobtrail.png` | Dashboard view with a few sample jobs in pipeline | Open the demo, save 2–3 jobs, screenshot the dashboard |
-| `inkpath.png` | Library view (the most visual page) | Open `harukicoder.github.io/InkPath/`, screenshot the library |
+| `inkpath.png` | Library view (the most visual page) | Open `pinyora.com`, screenshot the library |
 | `teachertcf.png` | The voice tutor interface mid-conversation | Start a session, screenshot when transcript is visible |
 | `iqiyi.png` | The iQIYI screenshot you already have (with triple subtitles) | Save your existing screenshot here |
 
