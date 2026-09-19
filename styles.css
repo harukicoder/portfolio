@@ -711,3 +711,32 @@ select:focus-visible {
   color: var(--color-faint);
   border-top: 1px solid var(--color-soft-border);
 }
+
+/* Stat panel — stands in for a screenshot on the projects that have no UI to
+   photograph (a rules engine and a Python package). Same card as an image. */
+.project-stats {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+  padding: 8px 14px;
+  text-align: center;
+}
+.project-stats div { display: grid; gap: 4px; }
+.project-stats b {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1;
+  font-weight: 400;
+  color: var(--color-accent);
+}
+.project-stats span {
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  color: var(--color-subtle);
+  line-height: 1.35;
+}
+
+/* The hero's decorative layers (blobs, grid overlay) are deliberately wider
+   than the viewport; on a phone that was leaving the whole page scrollable
+   sideways. Clip rather than hidden, so the sticky header still sticks. */
+html, body { overflow-x: clip; }
